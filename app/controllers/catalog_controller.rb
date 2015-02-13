@@ -92,12 +92,6 @@ class CatalogController < ApplicationController
     # config.add_facet_field 'facet', :tag => 'my_tag', :ex => 'my_tag'
 
     config.default_solr_params[:'facet.field'] = config.facet_fields.keys
-
-
-
-
-
-
     config.add_facet_field 'example_pivot_field', :label => 'Pivot Field', :pivot => ['format', 'language_facet']
 
     config.add_facet_field 'example_query_facet_field', :label => 'Publish Date', :query => {
@@ -206,59 +200,191 @@ class CatalogController < ApplicationController
     # solr request handler? The one set in config[:default_solr_parameters][:qt],
     # since we aren't specifying it otherwise. 
     
-    config.add_search_field 'all_fields', :label => 'All Fields'
+    config.add_search_field 'all_fields', :label => 'All Fields', :include_in_advanced_search => true
     
 
     # Now we see how to over-ride Solr request handler defaults, in this
     # case for a BL "search field", which is really a dismax aggregate
     # of Solr search fields. 
     
-    config.add_search_field('title') do |field|
-      # solr_parameters hash are sent to Solr as ordinary url query params. 
-      field.solr_parameters = { :'spellcheck.dictionary' => 'title' }
-
-      # :solr_local_parameters will be sent using Solr LocalParams
-      # syntax, as eg {! qf=$title_qf }. This is neccesary to use
-      # Solr parameter de-referencing like $title_qf.
-      # See: http://wiki.apache.org/solr/LocalParams
-      field.solr_local_parameters = { 
+    config.add_search_field('journal title') do |field|
+      field.solr_parameters = { :'format' => "Journal" }
+      field.solr_local_parameters = {
         :qf => '$title_qf',
-        :pf => '$title_pf'
+        :pf => '$title_pf',
+        :search_field => "journal title"
       }
     end
-    
-    config.add_search_field('author') do |field|
+    config.add_search_field('author/creator') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'author' }
-      field.solr_local_parameters = { 
+      field.solr_local_parameters = {
         :qf => '$author_qf',
         :pf => '$author_pf'
       }
     end
-    
     # Specifying a :qt only to show it's possible, and so our internal automated
-    # tests can test it. In this case it's the same as 
-    # config[:default_solr_parameters][:qt], so isn't actually neccesary. 
+    # tests can test it. In this case it's the same as
+    # config[:default_solr_parameters][:qt], so isn't actually neccesary.
     config.add_search_field('subject') do |field|
       field.solr_parameters = { :'spellcheck.dictionary' => 'subject' }
       field.qt = 'search'
-      field.solr_local_parameters = { 
+      field.solr_local_parameters = {
         :qf => '$subject_qf',
         :pf => '$subject_pf'
       }
     end
-
+    config.add_search_field('call number', :label => 'Call Number') do |field|
+#      field.solr_parameters = { :'spellcheck.dictionary' => 'call number' }
+      field.include_in_simple_select = true
+      field.solr_local_parameters = {
+        :qf => '$lc_callnum_qf',
+        :pf => '$lc_callnum_pf'
+      }
+    end
+    config.add_search_field('series') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$series_qf',
+         :pf => '$series_pf'
+       }
+    end
+    config.add_search_field('publisher') do |field|
+      # field.solr_parameters = { :'spellcheck.dictionary' => 'callnumber' }
+      field.solr_local_parameters = {
+        :qf => '$publisher_qf',
+        :pf => '$publisher_pf'
+      }
+    end
+    config.add_search_field('place of publication') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$pubplace_qf',
+         :pf => '$pubplace_pf'
+       }
+    end
+    config.add_search_field('publisher number/other identifier') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$number_qf',
+         :pf => '$number_pf'
+       }
+    end
+    config.add_search_field('isbn/issn', :label => 'ISBN/ISSN') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$isbnissn_qf',
+         :pf => '$isbnissn_pf'
+       }
+    end
+    config.add_search_field('notes') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$notes_qf',
+         :pf => '$notes_pf'
+       }
+    end
+    config.add_search_field('donor name') do |field|
+       field.include_in_simple_select = false
+       field.solr_local_parameters = {
+         :qf => '$donor_qf',
+         :pf => '$donor_pf'
+       }
+    end
+#    config.add_search_field('donor name') do |field|
+#       field.include_in_simple_select = false
+#       field.solr_parameters = { :qf => '$donor_t' }
+#    end
     # "sort results by" select (pulldown)
     # label in pulldown is followed by the name of the SOLR field to sort by and
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
     config.add_sort_field 'score desc, pub_date_sort desc, title_sort asc', :label => 'relevance'
-    config.add_sort_field 'pub_date_sort desc, title_sort asc', :label => 'year'
-    config.add_sort_field 'author_sort asc, title_sort asc', :label => 'author'
-    config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title'
+    config.add_sort_field 'pub_date_sort desc, title_sort asc', :label => 'year descending', :include_in_advanced_search => false
+    config.add_sort_field 'pub_date_sort asc, title_sort asc', :label => 'year ascending', :include_in_advanced_search => false
+    config.add_sort_field 'author_sort asc, title_sort asc', :label => 'author A-Z'
+    config.add_sort_field 'author_sort desc, title_sort asc', :label => 'author Z-A'
+    config.add_sort_field 'title_sort asc, pub_date_sort desc', :label => 'title A-Z', :browse_default => true
+    config.add_sort_field 'title_sort desc, pub_date_sort desc', :label => 'title Z-A'
 
-    # If there are more than this many search results, no spelling ("did you 
+    # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+  end
+
+  # Probably there's a better way to do this, but for now we'll make the mollom instance
+  # a class variable in order to maintain the connection across CAPTCHA 
+  # displays and repeated form submissions.
+  @@mollom = nil            
+  # Note: This function overrides the email function in the Blacklight gem found in lib/blacklight/catalog.rb
+  # (in order to add Mollom/CAPTCHA integration)
+  def email
+
+    @response, @documents = get_solr_response_for_field_values(SolrDocument.unique_key,params[:id])
+    captcha_ok = false
+
+    if request.post?
+
+      # First check to see whether we're here as the result of an attempt to solve a CAPTCHA
+      if params[:captcha_response]
+        @@mollom ||= Mollom.new({:public_key => ENV['mollom_public_key'], :private_key => ENV['mollom_private_key']})
+        captcha_ok = @@mollom.valid_captcha?(:session_id => params[:mollom_session], :solution => params[:captcha_response])
+      end
+
+      # 
+      if params[:to]
+        url_gen_params = {:host => request.host_with_port, :protocol => request.protocol}
+        result = nil  
+        # Check for valid email address
+        if params[:to].match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/)
+          captcha_ok = true #test
+          unless captcha_ok
+            # Create a new Mollom instance if necessary, then test the message content for spam
+            @@mollom ||= Mollom.new({:public_key => ENV['MOLLOM_PUBLIC_KEY'], :private_key => ENV['MOLLOM_PRIVATE_KEY']})
+            # Mollom can sometimes fail ('can't get mollom server-list'), so we have to put this next part in a begin/rescue block
+            begin
+                result = @@mollom.check_content(:author_mail => params[:to], :post_body => params[:message])
+                if result.ham?
+                    # Content is okay, we can proceed with the email
+                    email = RecordMailer.email_record(@documents, {:to => params[:to], :message => params[:message], :callnumber => params[:callnumber],}, url_gen_params, params)
+                elsif result.spam?
+                    # This is definite spam (according to Mollom)
+                    flash[:error] = 'Spam!'
+                end
+            rescue
+                # Mollom isn't working, so we'll have to just go ahead and mail the item
+                captcha_ok = true
+                email = RecordMailer.email_record(@documents, {:to => params[:to], :message => params[:message], :callnumber => params[:callnumber],}, url_gen_params)
+            end
+          end
+        else
+          flash[:error] = I18n.t('blacklight.email.errors.to.invalid', :to => params[:to])
+        end
+      else
+        flash[:error] = I18n.t('blacklight.email.errors.to.blank')
+      end
+
+      if !captcha_ok and ((!result.nil? and result.unsure?) or params[:captcha_response])  # i.e., we have to use a CAPTCHA and the user hasn't yet (successfully) submitted a solution
+        @captcha = @@mollom.image_captcha
+        # Need to pass through the message form elements in order to retain them in the next POST (from CAPTCHA submission)
+        @email_params = { :to => params[:to], :message => params[:message], :id => params['id'][0] }
+        return render :partial => 'captcha'
+      elsif !flash[:error] 
+        # Don't have to show a CAPTCHA and there are no errors, so we can send the email
+        email ||= RecordMailer.email_record(@documents, {:to => params[:to], :message => params[:message], :location => params[:location], :callnumber => params[:callnumber], :templocation => params[:templocation]}, url_gen_params, params)
+        email.deliver 
+        flash[:success] = "Email sent"
+        redirect_to catalog_path(params[:id]) unless request.xhr?
+      end
+
+    end  # request.post?
+
+    unless !request.xhr? && flash[:success]
+      respond_to do |format|
+        format.js { render :layout => false }
+        format.html
+      end
+    end
+
   end
 
 end 

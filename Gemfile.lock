@@ -1,3 +1,12 @@
+GIT
+  remote: git@github.com:cul-it/blacklight-cornell-advanced-search.git
+  revision: bfc525d463f4873bb0c1918e4812ec1ccaf4cbf3
+  branch: master
+  specs:
+    blacklight_cornell_advanced_search (2.1.1)
+      blacklight
+      parslet
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -49,10 +58,7 @@ GEM
       nokogiri (~> 1.6)
       rails (>= 3.2.6, < 5)
       rsolr (~> 1.0.6)
-    blacklight_range_limit (5.0.3)
-      blacklight (>= 5.0.0.pre4, < 6)
-      jquery-rails
-      rails (>= 3.0, < 5.0)
+    blankslate (3.1.3)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -83,10 +89,8 @@ GEM
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-rails (4.0.3)
-      rails-dom-testing (~> 1.0)
-      railties (>= 4.2.0)
-      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (5.0.3)
+      railties (>= 3.2.16)
     json (1.8.2)
     kaminari (0.16.3)
       actionpack (>= 3.0.0)
@@ -102,6 +106,8 @@ GEM
     multi_json (1.10.1)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    parslet (1.6.2)
+      blankslate (>= 2.0, <= 4.0)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -181,12 +187,12 @@ PLATFORMS
 
 DEPENDENCIES
   blacklight
-  blacklight_range_limit
+  blacklight_cornell_advanced_search!
   byebug
   coffee-rails (~> 4.1.0)
   dotenv
   jbuilder (~> 2.0)
-  jquery-rails
+  jquery-ui-rails
   rails (= 4.2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
