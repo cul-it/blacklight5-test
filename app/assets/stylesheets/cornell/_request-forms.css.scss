@@ -1,0 +1,87 @@
+h1.request-type {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.item-title-request {
+  font-size:1.25em;
+  font-weight:600;
+}
+#req {
+  select {
+    width: auto;
+  }
+}
+.copy-callnumber { color: $light-gray; }
+.copy-chron {
+  margin-left: 1em;
+  font-weight: normal;
+  color: $medium-gray;
+  text-shadow: none;
+  background: #ddd;
+}
+.request-author { margin-bottom: 1em; }
+.radio-label {
+  display: inline-block;
+  margin-top: .5em;
+  vertical-align: middle;
+}
+.place-hold,
+.place-request { font-size: .8em; }
+.borrow-direct-notice {
+  float: none;
+  font-size: .9em;
+}
+
+.align-bottom {vertical-align: bottom; margin-bottom: 10px}
+
+div.accordion-heading.request-options {
+  margin-left: 10px;
+  position: relative;
+  top: 5px;
+}
+div.request-options div.accordion-group {border:none;}
+div.request-options div.accordion-inner {
+  border:none;
+  padding:9px 15px;
+}
+div.request-options div.accordion-body .span4 {
+  margin-left:0px;
+  position:relative;
+  left:-15px;
+}
+.form-alternative-action{
+  font-size: .75em;
+  h3 {margin-top:3em;
+    }
+  }
+
+.help-inline.required {
+  font-size: .8em;
+  color: $cornell-primary;
+}
+.aeon {font-size: .8em}
+
+.aeon-circ {
+  border-left: solid 1px $light-tan;
+  padding-left:50px;
+  height: 100%
+}
+
+.delivery-estimate {
+  font-size:14px;
+  padding-top:5px;
+}
+
+table.request-options {
+    margin-top:5px;
+
+    tbody > tr:nth-child(2n) > td, tbody > tr:nth-child(2n+1) > th 
+      {background-color: $white;}
+
+    thead:first-child tr:first-child > th:last-child, thead:first-child tr:first-child th {
+    background-color: $tan;
+    color: $gray;}
+
+    .blacklight-title_display { line-height: inherit; }
+  }
+ 

@@ -1,0 +1,126 @@
+body.blacklight-catalog-index .document,
+body.blacklight-bookmarks-index .document {
+	clear: both;
+	border-bottom: 1px solid $light-tan;
+	padding: 20px 0;
+	img {
+		float: left;
+		margin-right: 1em;
+		width: 50px;
+		height: 75px;
+	}
+}
+
+.blacklight-title_display {
+	margin: 0;
+	font-weight: normal;
+	line-height: 1.2em;
+	font-size: 1.1em;
+}
+
+.document-data {
+	float: left;
+	width: 89%;
+	span {
+		font-size: .75em;
+		color: $light-gray;
+	}
+	.shadow-record {
+		margin-top: .15em;
+		vertical-align: top;
+		color: $white;
+	}
+	.blacklight-pub_date_display {
+		margin-left: .2em;
+		color: $dark-gray;
+	}
+	.blacklight-title_uniform_display {
+		display: block;
+		margin-top: -.2em;
+		font-style: italic;
+		color: $medium-gray;
+	}
+	.blacklight-author_display {
+		display: block;
+	}
+	.format {
+		margin-right: .5em;
+		color: $dark-gray;
+	}
+	.blacklight-pub_info_display {
+		margin-right: .5em;
+		color: $medium-gray;
+	}
+	.status {
+		font-size: 1em;
+		line-height: 1em;
+	}
+	.location { color: $medium-gray; }
+}
+
+.data-block {
+	margin-top: .4em;
+	line-height: 1em;
+}
+
+.status-online {
+	font-size: .75em;
+}
+
+.fa-check { color: $available; }
+.fa-clock-o { color: $unavailable; }
+// extra specificity required for question-sign since it's also
+// used for the Unknown format
+.status .fa-question-circle,
+.fa-warning {color: $yellow; }
+
+#sort-dropdown,
+#per_page-dropdown {
+	font-size: .8em;
+	.btn {
+		font-size: inherit;
+	}
+}
+.select-item {
+	float: right;
+	margin-left: 30px;
+}
+.select-all {
+	margin-left: 10px;
+	form { margin-bottom: 0; }
+	span {
+		font-size: .75em;
+		color: $light-gray;
+	}
+	input[type="checkbox"] {
+		margin-left: -15px;
+	}
+}
+.label-online {
+	background: $teal;
+	font-weight: normal;
+}
+.label-online:hover { background: $dark-teal; }
+
+// Search history
+// ------------------------------------------
+.search_history {
+	.filterName { margin-right: 0.25em; }
+	.label {
+		display: inline;
+		color: white;
+		margin: 0 .5em; }
+}
+
+.iconcover { // bump up width and heigh to accommodate for padding on nested img with img-polaroid class
+	float: left; 
+	width: 58px; 
+	margin-right: 1em; 
+	height: 83px;
+	text-align: center;
+	i { 
+		font-size: 1.75em;
+		margin-left: 4px;
+		position: relative;
+		top: -60px; }
+}

@@ -1,0 +1,169 @@
+header {
+  background: white;
+  border-bottom: 1px solid $tan;
+ 	h1 {
+    margin: 10px 0;
+    // font-weight: normal;
+    display: inline-block;
+    line-height: 1em;
+    font-size: 1.75em;
+  	a { color: $dark-gray; }
+    a:hover {
+      color: $dark-gray;
+      text-decoration: none;
+    }
+  }
+  // Search home button
+  .search-home {
+    // float: left;
+    font-size: 1.75em;
+    a {
+      color: #b4b4b4;
+    }
+    a:hover {
+      text-decoration: none;
+      color: $medium-gray;
+    }
+    .divider {
+      color: #eee;
+      margin: 0 2px 0 8px;
+    }
+  }
+}
+
+.beta {
+  margin-left: .2em;
+  vertical-align: middle;
+  &:hover { background: $blue; }
+}
+
+ul.blacklight-nav {
+  	font-size: 0.75em;
+  	margin: 15px 0 0 0;
+  	list-style: none;
+    float: right;
+  	li {
+      float: left;
+      border-left: 1px solid #ccc
+    }
+    li:first-child {
+      border-left: none;
+    }
+  	a {
+    	display: block;
+    	padding: 0 8px;
+    	// color: $pale-gray;
+      // color: #ccc;
+    }
+    a.user-email,
+    a.logout {
+      padding: 5px 0;
+      display: inline-block;
+    }
+    a.user-email {
+      margin-right: .5em;
+    }
+    a.logout {
+      font-size: .9em;
+      // color: $light-gray;
+    }
+   	a:hover {
+    	text-decoration: none;
+    	// background: $medium-gray;
+      // color: $white;
+      // @include border-radius(6px);
+    }
+    a.user-email:hover,
+    a.logout:hover {
+      background: none;
+      // color: $cornell-primary;
+    }
+}
+
+.current-user {
+  float: left;
+  margin-right: 1em;
+  color: $light-gray;
+}
+
+.nav-global {
+  padding-right: 0;
+  text-align: right;
+  .nav { 
+    list-style: none;
+    float: right;
+    li { 
+      float: left;
+      font-size: 12px;
+      border-left: 1px solid $cornell-primary-hover; }
+    li:first-child { border-left: 0; }
+    a { 
+      margin: 0 8px;
+      padding: 0;
+      display: inline-block;
+      color: white; }
+    a:hover { 
+      text-decoration: underline;
+      background: inherit; }
+  } 
+}
+
+// Nav from main site
+// -- see also responsive-480px-max.scss --
+//-----------------------------------------
+.navbar-cul {
+  background: $cornell-primary;
+  // @include gradient-vertical($start-color: red, $end-color: $cornell-primary-hover);
+  .container {
+    background: $dark-gray;
+    // @include border-top-radius(3px);
+    -webkit-background-clip: padding-box;
+  }
+  .nav {
+    li {
+      font-size: .875em;
+      a {
+        padding: 15px 20px;
+        color: #ccc;
+        text-shadow: none;
+      }
+      a:hover {
+        color: white;
+      }
+    }
+  }
+}
+.navbar-static-top {
+  margin-left: 0;
+  margin-right: 0;
+}
+.navbar-brand { 
+  color: white;
+  float: none;
+  margin: 0;
+  font-size: 16px;
+}
+.navbar-brand:hover { 
+  text-decoration: none;
+  color: white;
+}
+.navbar-header {
+  background: $cornell-primary;
+  // override bootstrap btn styles
+  .btn-navbar {
+    background: $cornell-primary;
+    margin: 0;
+    border: 0; 
+    border-radius: 0;
+    height: 45px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    .icon-bar {
+      background: white;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  .btn-navbar:hover,
+  .btn-navbar:active { background: $cornell-primary-hover; }
+}

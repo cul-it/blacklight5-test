@@ -1,0 +1,188 @@
+.facets {
+	margin-top: 0.5em;
+	padding: 10px;
+	background: white;
+	@include border-top-radius($border-radius-large);
+	@include border-bottom-radius($border-radius-large);
+	h5 {
+		padding: 6px 0 6px 0;
+		line-height: 1.2em;
+		font-size: 0.875em;
+		margin: 0 0 5px 0;
+		cursor: pointer;
+		color: $dark-gray;
+		i {
+			float: right;
+			margin-right: 0;
+			color: $light-gray;
+		}
+	}
+	h5.twiddle-open {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+	ul {
+		margin: 0 0 5px 10px;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		font-size: 0.75em;
+		color: $light-gray;
+		padding-right: 50px;
+	}
+	p {
+		margin: 0 0 .25em;
+		border-bottom: 1px solid $light-tan;
+    	padding: 0 0 .25em 0;
+	}
+	i { 
+		color: $dark-gray;
+		margin-right: 3px; }
+	.navbar {
+		margin-bottom: 0;
+		padding: 0 0 5px 10px;
+	}
+	a:hover { background: white; }
+}
+// OVERRIDE #FACETS
+#facets {
+	ul {
+		margin-left: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	// upgrade to font awesome 4.0.3.0 and no longer needs this margin
+	// ul.icons-ul {
+	// 	margin-left: 1.3em;
+	// }
+	li {
+		margin-right: 0;
+		line-height: 16px;
+		padding-right: 0;
+		.count {
+			margin-right: 0;
+		}
+	}
+	a.remove { padding: 3px 5px; }
+	a.remove:hover {
+		text-decoration: none;
+		background: white;
+		i { color: $medium-gray; }
+	}
+	li.more_facets_link {
+		float: none;
+		margin-right: 0; }
+	span.selected {
+		color: $dark-gray;
+	}
+	h5 + div { padding-bottom: .5em; }
+}
+.count {
+  font-family: $monospaceFontFamily;
+  font-size: .9em;
+}
+
+// PUBLICATION YEAR
+.limit_content {
+	margin-right: 10px;
+	.subsection { margin-top: .5em; }
+}
+.blacklight-pub_date_facet {
+	form { margin-bottom: 1.2em; }
+	.count {
+		text-align: right;
+		float: right;
+		color: $light-gray; }
+	.tickLabel { font-size: 0.875em; }
+	.missing,
+	span.selected {font-size: 0.75em;}
+	.range_limit {
+		i { font-size: 0.75em; }
+	}
+	.limit_content {
+		.count { font-size: 0.75em; }
+	}
+	.limit_content {
+		.missing {
+			.count { font-size: 1em; }
+		}
+	}
+}
+form.range_limit {
+	input.range_begin,
+	input.range_end {
+		font-size: 0.75em;
+		padding: 1px 3px;
+		width: 3em;
+	}
+}
+.navbar {
+	.blacklight-pub_date_facet {
+		.btn, .btn-group {
+			margin-top: 0;
+			font-size: 0.75em;
+			padding: 1px 6px;
+		}
+	}
+}
+.ui-slider {
+	margin: 0 0 0 .6em !important;
+	width: 89% !important;
+}
+.hover_legend { padding: 0; }
+// add a little space above the unknown value in pub year facet
+.blacklight-pub_date_facet {
+	.missing.subsection {
+		margin-top: 20px;
+	}
+}
+
+// SELECTED FACETS
+
+.selected-facets {
+	clear: both;
+	padding-top: 20px;
+	.btn-info {
+		margin-bottom: 3px;
+		text-align: left;
+		i { margin: .1em 0 0 .5em; }
+	}
+	a {
+		color: $white;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+.selected-facet {
+	padding: 0 10px;
+	background: $cornell-blue;
+	border: 1px solid $cornell-blue-border;
+	font-size: 0.875em;
+	margin: 0 .5em .5em 0;
+	color: #fff;
+	display: inline-block;
+	-webkit-border-radius: 20px;
+	-moz-border-tradius: 20px;
+	border-radius: 20px;
+}
+
+// MODAL WINDOW
+.modal { background: $pale-gray; }
+.close {
+	color: $medium-gray;
+	opacity: 1;
+}
+// upgrade to font awesome 4.0.3.0 and no longer needs this margin
+// .facet_extended_list.icons-ul {
+// 	margin-left: 1.7em;
+// }
+
+.twiddle-open .fa-plus-circle {
+  @extend .fa-minus-circle;
+  opacity: 1;
+}
+.facet_extended_list {
+	i { margin-right: 5px; }
+}
