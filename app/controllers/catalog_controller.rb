@@ -19,13 +19,167 @@ class CatalogController < ApplicationController
       :defType => 'edismax'
     }
     
-    # solr path which will be added to solr base url before the other solr params.
-    #config.solr_path = 'select' 
-    
-    # items to show per page, each number in the array represent another option to choose from.
-    #config.per_page = [10,20,50,100]
+    ## list of display fields with icon
+    config.display_icon = {
+        'format' => 1
+    }
 
-    ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or 
+    ## list of clickable display fields mapped to target index field
+    ## target index field should be defined in add_search_field later this file
+    ## target index field is searched when this link is clicked
+    config.display_clickable = {
+        'author_display' => {
+            :search_field => 'author/creator',
+            :sep => '|',
+            :sep_display => ' / ',
+            :pair_list => true
+        },
+        'author_addl_display' => {
+            :search_field => 'author/creator',
+            :sep => '|',
+            :sep_display => ' / ',
+            :pair_list => true
+        },
+        'subject_display' => {
+            :search_field => 'subject',
+            :sep => '|',
+            :sep_index => ' ',
+            :sep_display => ' > ',
+            :hierarchical => true
+        },
+        'title_uniform_display' => {
+            :search_field => 'title',
+            :related_search_field => 'author/creator',
+            :sep => '|',
+            :key_value => true
+        },
+        'title_series_display'  => 'title',
+        'continues_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'continues_in_part_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'supersedes_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'absorbed_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'absorbed_in_part_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'continued_by_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'continued_in_part_by_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'superseded_by_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'absorbed_by_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'absorbed_in_part_by_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'split_into_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'merger_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'translation_of_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'has_translation_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'other_edition_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'has_supplement_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'supplement_to_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'other_form_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'issued_with_display' => {
+            :search_field => 'title',
+            :sep => '|',
+            :key_value => true
+        },
+        'included_work_display' => {
+            :search_field => 'title',
+            :related_search_field => 'author/creator',
+            :sep => '|',
+            :key_value => true
+        },
+        'related_work_display' => {
+            :search_field => 'title',
+            :related_search_field => 'author/creator',
+            :sep => '|',
+            :key_value => true
+        }
+    }
+
+    config.display_link = {
+        'url_access_display' => { :label => 'Access content' },
+        'url_other_display'  => { :label => 'Other online content' },
+        'url_bookplate_display'  => { :label => 'Bookplate' },
+        'url_findingaid_display'  => { :label => 'Finding Aid' }
+
+    }
+
+    ## custom multi-valued fields separator
+    config.multiline_display_fields = {
+        'pub_info_display' => '<br/>',
+        'edition_display' => '<br/>',
+        'subject_display' => '<br/>',
+        'notes' => '<br/>'
+    }
+
+    ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
     #config.default_document_solr_params = {
@@ -33,8 +187,12 @@ class CatalogController < ApplicationController
     #  ## These are hard-coded in the blacklight 'document' requestHandler
     #  # :fl => '*',
     #  # :rows => 1
-    #  # :q => '{!raw f=id v=$id}' 
+    #  # :q => '{!raw f=id v=$id}'
     #}
+
+    # solr field configuration for search results/index views
+    config.index.show_link = 'title_display', 'subtitle_display', 'fulltitle_vern_display' #display as 'fulltitle_vern / title : subtitle'
+    config.index.record_display_type = 'format'
 
     # solr field configuration for search results/index views
     config.index.display_type_field = 'format'
