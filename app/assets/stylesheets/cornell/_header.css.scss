@@ -113,10 +113,10 @@ ul.blacklight-nav {
 //-----------------------------------------
 .navbar-cul {
   background: $cornell-primary;
-  // @include gradient-vertical($start-color: red, $end-color: $cornell-primary-hover);
+  @include gradient-vertical($cornell-primary,$cornell-primary-hover);
   .container {
     background: $dark-gray;
-    // @include border-top-radius(3px);
+    @include border-top-radius(3px);
     -webkit-background-clip: padding-box;
   }
   .nav {

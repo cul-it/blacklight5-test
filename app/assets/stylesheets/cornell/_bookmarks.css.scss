@@ -17,13 +17,13 @@ body.blacklight-bookmarks-index .item-tools ul { float: left;}
 		clear: both;
 		font-weight: normal;
 		line-height: $line-height-base;
-    color: $dropdown-link-color;
+    	color: $dropdown-link-color;
 		white-space: nowrap;
 	}
 	> li > form > a:hover {
 		text-decoration: none;
-	  color: $dropdown-link-hover-color;
-	  @include gradient-vertical($dropdown-link-hover-bg, darken($dropdown-link-hover-bg, 5%));
+	  	color: $dropdown-link-hover-color;
+	  	@include gradient-vertical($dropdown-link-hover-bg, darken($dropdown-link-hover-bg, 5%));
 	}
 }
 .blacklight-bookmarks {
