@@ -150,7 +150,7 @@ ul.blacklight-nav {
 .navbar-header {
   background: $cornell-primary;
   // override bootstrap btn styles
-  .btn-navbar {
+  .navbar-toggle {
     background: $cornell-primary;
     margin: 0;
     border: 0; 
@@ -164,6 +164,6 @@ ul.blacklight-nav {
       box-shadow: none;
     }
   }
-  .btn-navbar:hover,
-  .btn-navbar:active { background: $cornell-primary-hover; }
+  .navbar-toggle:hover,
+  .navbar-toggle:active { background: $cornell-primary-hover; }
 }
