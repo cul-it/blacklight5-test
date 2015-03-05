@@ -3,8 +3,7 @@ $cornell-primary-hover: #990f26;
 $cornell-font: verdana, sans-serif;
 $cornell-blue: #6eb4cd;
 $cornell-blue-border: #4892ac;
-
-$link-primary: #b31b1b;
+$cornell-medium-blue: #0068ac;
 
 $dark-gray: #222;
 $medium-gray: #666;
@@ -33,6 +32,9 @@ $info: $blue;
 
 $bright-blue: #0068ac;
 
+$link-primary: $cornell-medium-blue;
+$link-primary-hover: black;
+
 // -------------------
 // Boostrap overrides
 // -------------------
@@ -43,7 +45,7 @@ $body-bg: $dark-gray;
 
 // Wells
 // -------------------------
-$wellBackground: $light-tan;
+$well-bg: $light-tan;
 
 // Fonts
 // -------------------------

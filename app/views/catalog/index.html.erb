@@ -1,3 +1,5 @@
+<%= render :partial => 'search_form' %>
+
 <div class="row">
   <%= render :partial=>'sidebar' %>
 
@@ -8,7 +10,7 @@
         <%= render 'home' %>
       <% else %>
 
-        <h2 class="hide-text top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
+        <h2 class="sr-only top-content-title"><%= t('blacklight.search.search_results_header') %></h2>
 
         <% @page_title = t('blacklight.search.title', :application_name => application_name) %>
 
@@ -16,7 +18,7 @@
         <% render_opensearch_response_metadata.html_safe %>
 
         
-        <%= render :partial => 'search_form' %>
+        <%#= render :partial => 'search_form' %>
 
         <%if @response.total_count < 1 %>
         <p>Your search returned 0 results. Try searching 
@@ -29,7 +31,7 @@
         <%else%>
         <%= render 'sort_and_per_page' %>
         <%end%>
-        <h2 class="hide-text"><%= t('blacklight.search.search_results') %></h2>
+        <h2 class="sr-only"><%= t('blacklight.search.search_results') %></h2>
         <%= render_document_index %>
 
 
