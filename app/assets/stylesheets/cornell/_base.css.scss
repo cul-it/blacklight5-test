@@ -61,8 +61,10 @@ textarea {
 .home-message {
 	margin-top: 30px;
 	p {
-		line-height: 1.5em;
-		margin-bottom: 15px; }
+		// line-height: 1.5em;
+		margin-bottom: 15px;
+		font-size: 16px;
+	}
 	li {
 		line-height: 1.5em;
 		margin-bottom: .5em; }
@@ -113,4 +115,23 @@ textarea {
 .btn-libraries:focus {
 	background: #16524d;
 	color: white;
+}
+
+// Well overrides
+// ------------------------
+
+.well {
+	border-radius: 0;
+	box-shadow: none;
+}
+
+// Panel overrides
+// ------------------------
+.panel-group {
+	.panel {
+		border-radius: 0;
+	}
+}
+.panel-default > .panel-heading {
+	background: $light-tan;
 }
