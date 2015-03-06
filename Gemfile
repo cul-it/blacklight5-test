@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
+#gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
+gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
