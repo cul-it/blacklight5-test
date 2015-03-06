@@ -116,6 +116,9 @@ textarea {
 	background: #16524d;
 	color: white;
 }
+.btn-secondary {
+	background: $tan;
+}
 
 // Well overrides
 // ------------------------
@@ -130,8 +133,17 @@ textarea {
 .panel-group {
 	.panel {
 		border-radius: 0;
+		border: 0 0 1px 0;
+		box-shadow: none;
 	}
 }
 .panel-default > .panel-heading {
 	background: $light-tan;
+	border-radius: 0;
+}
+// Img overrides
+// ------------------------
+.img-thumbnail {
+	border-radius: 0;
+	background: white;
 }

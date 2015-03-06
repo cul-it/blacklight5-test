@@ -1,6 +1,6 @@
 <% if query_has_constraints? || params[:range].present? %>
 		<div class="selected-facets">
-			<span class="start-over"><%=link_to t('blacklight.search.start_over'), url_for(:action=>'index'), :id=>"startOverLink" %></span>
+			<%=link_to t('blacklight.search.start_over'), url_for(:action=>'index'), :id=>"startOverLink", :class=>"btn btn-secondary" %>
 			<span class="constraints-label sr-only"><% t('blacklight.search.filters.title') %></span>
 			<%#= debug params[:show_query] %>
 			<%if params[:q_row].nil? and params[:f].nil? %>
