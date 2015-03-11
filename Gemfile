@@ -1,8 +1,20 @@
 source 'https://rubygems.org'
 
-gem 'blacklight'
+gem 'blacklight', '5.9.0'
 gem 'blacklight_range_limit'
-gem 'dotenv'
+gem 'dotenv-rails'
+gem 'activerecord-session_store'
+gem 'protected_attributes'
+gem 'savon'
+gem 'httpclient'
+gem 'haml'
+gem 'ultraviolet'
+gem 'mysql'
+gem 'kaminari'
+gem 'json'
+gem 'haml-rails'
+gem 'marc'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record
@@ -15,8 +27,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
-#gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
-gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
+gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
+#gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
