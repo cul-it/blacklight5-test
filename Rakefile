@@ -3,4 +3,5 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Rails.application.load_tasks
+#Rails.application.load_tasks
+BlacklightCornell::Application.load_tasks
