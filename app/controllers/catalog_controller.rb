@@ -1,9 +1,8 @@
 # -*- encoding : utf-8 -*-
 #
 class CatalogController < ApplicationController  
-
   include Blacklight::Catalog
-#  include BlacklightCornell::CornellCatalog
+  #include BlacklightCornell::CornellCatalog
 
   #self.solr_search_params_logic << :sortby_title_when_browsing
 
