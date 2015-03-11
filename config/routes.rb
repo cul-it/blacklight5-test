@@ -1,6 +1,17 @@
-Rails.application.routes.draw do
+##Rails.application.routes.draw do
+BlacklightCornell::Application.routes.draw do
+
   root :to => "catalog#index"
-  blacklight_for :catalog
+
+  Blacklight.add_routes(self)
+  get '/databases' => 'databases#index', :as => 'databases_index'
+  get '/databases/title/:alpha' => 'databases#title', :as => 'databases_title'
+  get '/databases/searchdb/' => 'databases#searchdb', :as => 'databases_searchdb'
+  get '/databases/subject/:q' => 'databases#subject', :as => 'databases_subject'
+  get '/databases/show/:id' => 'databases#show', :as => 'databases_show'
+  get '/databases/searchERMdb/' => 'databases#searchERMdb', :as => 'databases_searchERMdb'
+
+##  blacklight_for :catalog
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
