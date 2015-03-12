@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class DatabasesController < ApplicationController
   include Blacklight::Catalog
-#  include BlacklightCornell::CornellCatalog
+  include BlacklightCornell::CornellCatalog
 #  include BlacklightUnapi::ControllerExtension
 
   def subject

@@ -987,7 +987,12 @@ module CornellCatalogHelper
     end
     cond2
   end #def collapse_locs
-
+def existing_bookmark_for(document_id)
+  Rails.logger.info("POOP = #{document_id}")
+  # to_a, we don't want to go to the database, we want to use cached
+  # copy.
+  self.bookmarks.to_a.find {|b| b.document_id == document_id}
+  end
 end # End of Module
 
     # this logic is from the voyager_oracle_api status.rb

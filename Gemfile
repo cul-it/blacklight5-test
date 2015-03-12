@@ -16,7 +16,7 @@ gem 'haml-rails'
 gem 'marc'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.0'
+gem 'rails'#, '4.2.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -29,6 +29,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
 #gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
+gem 'blacklight_unapi', :git => 'git@github.com:cul-it/blacklight-unapi', :branch => 'rails4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -61,3 +62,6 @@ group :development, :test do
 gem 'font-awesome-rails' 
 end
 
+
+gem 'devise'
+gem 'devise-guests', '~> 0.3'
