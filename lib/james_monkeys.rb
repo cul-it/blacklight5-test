@@ -40,6 +40,10 @@ class String
       self
     end
   end
+  
+  def base_class()
+    
+  end
 end
 
 

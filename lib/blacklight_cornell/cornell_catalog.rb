@@ -29,8 +29,8 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
   end
 
   def search_action_url
-    url_for(:action => 'index', :only_path => true)
-
+    #url_for(:action => 'index', :only_path => true)
+    catalog_index_url
   end
 
   def add_cjk_params_logic
@@ -39,8 +39,11 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
 
   # get search results from the solr index
   def index
-    extra_head_content << view_context.auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') )
-    extra_head_content << view_context.auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') )
+    #content_for :head do
+      view_context.auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') )
+    #end
+    #extra_head_content << view_context.auto_discovery_link_tag(:rss, url_for(params.merge(:format => 'rss')), :title => t('blacklight.search.rss_feed') )
+    #extra_head_content << view_context.auto_discovery_link_tag(:atom, url_for(params.merge(:format => 'atom')), :title => t('blacklight.search.atom_feed') )
 
     # @bookmarks = current_or_guest_user.bookmarks
     if (!params[:range].nil?)
@@ -379,7 +382,7 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
 
        new_search = Search.new
        new_search.assign_attributes({:query_params => params_copy}, :without_protection => true)
-       new_search.save
+       #new_search.save
 
         session[:history].unshift(new_search.id)
         # Only keep most recent X searches in history, for performance.

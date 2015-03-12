@@ -1,9 +1,25 @@
-##Rails.application.routes.draw do
 BlacklightCornell::Application.routes.draw do
 
   root :to => "catalog#index"
 
   Blacklight.add_routes(self)
+
+  devise_for :users
+  get 'backend/holdings/:id' => 'backend#holdings', :as => 'backend_holdings'
+  get 'backend/holdings_short/:id' => 'backend#holdings_short', :as => 'backend_holdings_short'
+  get 'backend/holdings_shorth/:id' => 'backend#holdings_shorth', :as => 'backend_holdings_shorth'
+  get 'backend/holdings_shorthm/:id' => 'backend#holdings_shorthm', :as => 'backend_holdings_shorthm', :constraints => { :id => /.+/}
+  get 'backend/holdings_mail/:id' => 'backend#holdings_mail', :as => 'backend_holdings_mail'
+# commenting out until certain this is a dead-end route  get 'backend/clio_recall/:id', :to => "backend#clio_recall" , :as => :clio_recall
+  get 'backend/feedback_mail', :to => "backend#feedback_mail"
+  
+  post 'catalog/sms' => 'catalog#sms'#, :as => 'catalog_sms' # :via => :post
+  get 'catalog/check_captcha' => 'catalog#check_captcha', :as => 'check_captcha'
+
+  resources :catalog, only:  [:post, :get]
+  get 'catalog/email' => 'catalog#email', :as => 'xcatalog_email', :via => :post
+  
+  
   get '/databases' => 'databases#index', :as => 'databases_index'
   get '/databases/title/:alpha' => 'databases#title', :as => 'databases_title'
   get '/databases/searchdb/' => 'databases#searchdb', :as => 'databases_searchdb'
