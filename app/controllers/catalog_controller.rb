@@ -3,7 +3,7 @@
 class CatalogController < ApplicationController  
   include Blacklight::Catalog
   include BlacklightCornell::CornellCatalog
-#  include BlacklightUnapi::ControllerExtension
+  include BlacklightUnapi::ControllerExtension
 
   #self.solr_search_params_logic << :sortby_title_when_browsing
 

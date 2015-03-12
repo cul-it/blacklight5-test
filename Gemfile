@@ -14,6 +14,11 @@ gem 'kaminari'
 gem 'json'
 gem 'haml-rails'
 gem 'marc'
+#gem 'blacklight_cornell_requests', :git => 'git@github.com:cul-it/blacklight-cornell-requests.git', :branch => 'master'
+gem 'blacklight_cornell_requests', :path => '/users/jac244/workspace/blacklight-cornell-requests'
+gem 'bento_search'
+gem 'celluloid'  # Required for bento_search multisearcher
+gem 'zoom', :git => 'https://github.com/bricestacey/ruby-zoom.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'#, '4.2.0'
@@ -29,7 +34,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer', platforms: :ruby
 gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
 #gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
-gem 'blacklight_unapi', :git => 'git@github.com:cul-it/blacklight-unapi', :branch => 'rails4'
+gem 'blacklight_unapi'#, :git => 'git@github.com:cul-it/blacklight-unapi', :branch => 'rails4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
