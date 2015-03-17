@@ -11,6 +11,7 @@ gem 'haml'
 gem 'ultraviolet'
 gem 'mysql'
 gem 'kaminari'
+#gem 'blacklight_google_analytics'
 gem 'json'
 gem 'haml-rails'
 gem 'marc'
@@ -35,6 +36,7 @@ gem 'therubyracer', platforms: :ruby
 gem 'blacklight_cornell_advanced_search', :path => '/users/jac244/workspace/blacklight-cornell-advanced-search'
 #gem 'blacklight_cornell_advanced_search', :git => 'git@github.com:cul-it/blacklight-cornell-advanced-search.git', :branch => 'master'
 gem 'blacklight_unapi'#, :git => 'git@github.com:cul-it/blacklight-unapi', :branch => 'rails4'
+gem 'rufus-scheduler'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

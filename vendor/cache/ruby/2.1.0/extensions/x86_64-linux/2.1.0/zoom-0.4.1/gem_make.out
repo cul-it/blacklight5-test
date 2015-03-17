@@ -1,0 +1,6 @@
+/usr/local/rvm/rubies/ruby-2.1.5/bin/ruby -r ./siteconf20150312-30521-15u8oz4.rb extconf.rb 
+extconf.rb:5: Invalid break
+extconf.rb:10: Invalid break
+extconf.rb: compile error (SyntaxError)
+
+extconf failed, exit code 1

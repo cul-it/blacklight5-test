@@ -1,0 +1,340 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/books/v1/volumes?maxResults=10&q=cancer
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "RXhwaXJlcw==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxNCBHTVQ=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAxNToyNzoxNCBHTVQ=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZSwgbWF4LWFnZT0wLCBtdXN0LXJldmFsaWRhdGUsIG5vLXRyYW5z
+        Zm9ybQ==
+      !binary "RXRhZw==":
+      - !binary |-
+        InNjeTROa3AyVnBMTlo1azlOLW9rdXZwLXNOay9xTW1sWDkwaWpoZUZoSkYx
+        X0NFNVcyV3RRSDAi
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24vanNvbjsgY2hhcnNldD1VVEYtOA==
+      !binary "WC1Db250ZW50LVR5cGUtT3B0aW9ucw==":
+      - !binary |-
+        bm9zbmlmZg==
+      !binary "WC1GcmFtZS1PcHRpb25z":
+      - !binary |-
+        U0FNRU9SSUdJTg==
+      !binary "WC1Yc3MtUHJvdGVjdGlvbg==":
+      - !binary |-
+        MTsgbW9kZT1ibG9jaw==
+      !binary "U2VydmVy":
+      - !binary |-
+        R1NF
+      !binary "VHJhbnNmZXItRW5jb2Rpbmc=":
+      - !binary |-
+        Y2h1bmtlZA==
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"kind\": \"books#volumes\",\n \"totalItems\": 1761,\n \"items\":
+        [\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"d-eg-7yZ7vIC\",\n   \"etag\":
+        \"6woOPjZEoNA\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/d-eg-7yZ7vIC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Angela
+        Royston\"\n    ],\n    \"publisher\": \"Heinemann First Library\",\n    \"publishedDate\":
+        \"2005-06-01\",\n    \"description\": \"Cancer is a condition many people
+        live with. Find out what life is like for some who have cancer.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1403458502\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781403458506\"\n
+        \    }\n    ],\n    \"pageCount\": 32,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Health & Fitness\"\n    ],\n    \"averageRating\": 5.0,\n    \"ratingsCount\":
+        2,\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\":
+        \"http://bks9.books.google.com/books?id=d-eg-7yZ7vIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=d-eg-7yZ7vIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=d-eg-7yZ7vIC&printsec=frontcover&dq=cancer&hl=&cd=1&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=d-eg-7yZ7vIC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=d-eg-7yZ7vIC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=d-eg-7yZ7vIC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Cancer is a condition many people live with. Find out what life is like
+        for some who have cancer.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"PMbLAT1JJqUC\",\n   \"etag\": \"lxwlSBMEVdw\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/PMbLAT1JJqUC\",\n   \"volumeInfo\":
+        {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Oliver Gillie\"\n
+        \   ],\n    \"publisher\": \"NA-h\",\n    \"publishedDate\": \"2004-05-01\",\n
+        \   \"description\": \"Provides an overview of cancer, describing what it
+        is, what the various forms are that it takes, what it is like to live with
+        this disease, and some of the available treatments.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1403451443\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781403451446\"\n
+        \    }\n    ],\n    \"pageCount\": 56,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"preview-1.0.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks9.books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=PMbLAT1JJqUC&printsec=frontcover&dq=cancer&hl=&cd=2&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=PMbLAT1JJqUC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=PMbLAT1JJqUC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=PMbLAT1JJqUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Provides an overview of cancer, describing what it is, what the various
+        forms are that it takes, what it is like to live with this disease, and some
+        of the available treatments.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n
+        \  \"id\": \"E-0_T_sEMB8C\",\n   \"etag\": \"Ajq0OdjVoVk\",\n   \"selfLink\":
+        \"https://www.googleapis.com/books/v1/volumes/E-0_T_sEMB8C\",\n   \"volumeInfo\":
+        {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"101 Solutions to a Preventable
+        Epidemic\",\n    \"authors\": [\n     \"Liz Armstrong\",\n     \"Guy Dauncey\",\n
+        \    \"Anne Wordsworth\"\n    ],\n    \"publisher\": \"New Society Pub\",\n
+        \   \"publishedDate\": \"2007-05-01\",\n    \"description\": \"How to prevent
+        cancer before it starts.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"0865715424\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9780865715424\"\n     }\n    ],\n    \"pageCount\":
+        317,\n    \"printType\": \"BOOK\",\n    \"averageRating\": 3.0,\n    \"ratingsCount\":
+        1,\n    \"contentVersion\": \"0.1.0.0.preview.1\",\n    \"imageLinks\": {\n
+        \    \"smallThumbnail\": \"http://bks9.books.google.com/books?id=E-0_T_sEMB8C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks9.books.google.com/books?id=E-0_T_sEMB8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=E-0_T_sEMB8C&printsec=frontcover&dq=cancer&hl=&cd=3&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=E-0_T_sEMB8C&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=E-0_T_sEMB8C\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=E-0_T_sEMB8C&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=E-0_T_sEMB8C&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"How to prevent cancer before it starts.\"\n   }\n  },\n  {\n   \"kind\":
+        \"books#volume\",\n   \"id\": \"5wsylnGBaWUC\",\n   \"etag\": \"EZ17oQ3np0I\",\n
+        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/5wsylnGBaWUC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Linda
+        Page\"\n    ],\n    \"publisher\": \"Healthy Healing Pubns\",\n    \"publishedDate\":
+        \"1997-12-01\",\n    \"description\": \"The very latest information about
+        cancers, alternative treatments, and natural therapies. A must for every natural
+        healing library. From a Certified Doctor of Naturopathy and PhD. who has been
+        working in nutrition and herbal medicine since the earlier seventies. Contents
+        include New Facts About Cancer Causes, Is Cancer Preventable, Can Herbal Medicines
+        Fight Cancer, and Programs for Specific Types of Cancer.\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"1884334369\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781884334368\"\n
+        \    }\n    ],\n    \"pageCount\": 96,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"1.1.1.0.preview.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks8.books.google.com/books?id=5wsylnGBaWUC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks8.books.google.com/books?id=5wsylnGBaWUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=5wsylnGBaWUC&printsec=frontcover&dq=cancer&hl=&cd=4&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=5wsylnGBaWUC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=5wsylnGBaWUC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=5wsylnGBaWUC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Contents include New Facts About Cancer Causes, Is Cancer Preventable, Can
+        Herbal Medicines Fight Cancer, and Programs for Specific Types of Cancer.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"n__a1sG0EF4C\",\n
+        \  \"etag\": \"PyD4RPFoX+4\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/n__a1sG0EF4C\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"From
+        Mechanisms to Therapeutic Approaches\",\n    \"authors\": [\n     \"Robert
+        A. Meyers\"\n    ],\n    \"publisher\": \"Wiley-VCH\",\n    \"publishedDate\":
+        \"2007-07-31\",\n    \"description\": \"With an editorial board containing
+        12 Nobel laureates, this invaluable collection of high-quality articles on
+        cancer biology is taken from the highly acclaimed R.A. Meyer's Encyclopedia
+        of Molecular Cell Biology and Molecular Medicine. Clearly divided into three
+        main sections, this handbook covers a wide range of topics from molecular
+        mechanisms and organ specific cancers to diagnostic and therapeutic approaches.
+        The articles are uniformly structured for ease of use and carefully designed
+        to aid readers of all levels of expertise. To this end, each chapter includes
+        a glossary of the most important keywords, a concise summary of the article
+        and comprehensive literature references. This title is a ready reference for
+        molecular and cell biologists, cancer researchers, oncologists, pharmacologists,
+        as well as for those working in the pharmaceutical and biotechnological industries.\",\n
+        \   \"industryIdentifiers\": [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\":
+        \"3527317686\"\n     },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\":
+        \"9783527317684\"\n     }\n    ],\n    \"pageCount\": 478,\n    \"printType\":
+        \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n    ],\n    \"contentVersion\":
+        \"0.0.1.0.preview.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks5.books.google.com/books?id=n__a1sG0EF4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=n__a1sG0EF4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=n__a1sG0EF4C&printsec=frontcover&dq=cancer&hl=&cd=5&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=n__a1sG0EF4C&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=n__a1sG0EF4C\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=n__a1sG0EF4C&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"With an editorial board containing 12 Nobel laureates, this invaluable collection
+        of high-quality articles on cancer biology is taken from the highly acclaimed
+        R.A. Meyer&#39;s Encyclopedia of Molecular Cell Biology and Molecular Medicine.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"j0RV27loexoC\",\n
+        \  \"etag\": \"OkNwOvZRmn0\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/j0RV27loexoC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"Basic
+        Science and Clinical Aspects\",\n    \"authors\": [\n     \"Craig A. Almeida\",\n
+        \    \"Sheila A. Barry\"\n    ],\n    \"publisher\": \"Wiley-Blackwell\",\n
+        \   \"publishedDate\": \"2011-08-26\",\n    \"description\": \".\\\".\\\".
+        Useful background information is displayed in blue boxes, and good use is
+        made of numerous tables and diagrams... a useful book for the undergraduate
+        medical or allied health professional...\\\"\\\" -Oncology News, May/June
+        2010 This forward looking cancer biology book appeals to a wide ranging audience.
+        Introductory chapters that provide the molecular, cellular, and genetic information
+        needed to comprehend the material of the subsequent chapters bring unprepared
+        students up to speed for the rest of the book and serve as a useful refresher
+        for those with previous biology background. The second set of chapters focuses
+        on the main cancers in terms of risk factors, diagnostic and treatment methods
+        and relevant current research. The final section encompasses the immune system's
+        role in the prevention and development of cancer and the impact that the Human
+        Genome Project will have on future approaches to cancer care. While best suited
+        to non-majors cancer biology courses, the depth provided satisfies courses
+        that combine both majors and non-majors. Also, and deliberately, the authors
+        have incorporated relevant information on diagnosis and treatment options
+        that lend appeal to the lay reader.\",\n    \"industryIdentifiers\": [\n     {\n
+        \     \"type\": \"ISBN_10\",\n      \"identifier\": \"1444357395\"\n     },\n
+        \    {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9781444357394\"\n
+        \    }\n    ],\n    \"pageCount\": 424,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"contentVersion\": \"1.4.2.0.preview.3\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=j0RV27loexoC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=j0RV27loexoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=j0RV27loexoC&printsec=frontcover&dq=cancer&hl=&cd=6&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=j0RV27loexoC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=j0RV27loexoC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FOR_SALE\",\n    \"isEbook\": true,\n    \"listPrice\": {\n     \"amount\":
+        64.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"retailPrice\": {\n     \"amount\":
+        64.99,\n     \"currencyCode\": \"USD\"\n    },\n    \"buyLink\": \"http://books.google.com/books?id=j0RV27loexoC&dq=cancer&hl=&buy=&source=gbs_api\"\n
+        \  },\n   \"accessInfo\": {\n    \"country\": \"US\",\n    \"viewability\":
+        \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\": false,\n    \"textToSpeechPermission\":
+        \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\": {\n     \"isAvailable\": true,\n
+        \    \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=j0RV27loexoC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"acsTokenLink\":
+        \"http://books.google.com/books/download/Cancer-sample-pdf.acsm?id=j0RV27loexoC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=j0RV27loexoC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"The text is strategically inclusive of pedagogical features that will assist
+        students in both study and comprehension while illustrating real life application
+        of the concepts.\"\n   }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\":
+        \"u3bnPGRxs1YC\",\n   \"etag\": \"9u33LRmv4Dg\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/u3bnPGRxs1YC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"We Live
+        and Die by Radiation\",\n    \"authors\": [\n     \"Michelangelo Delfino\",\n
+        \    \"Mary E. Day\"\n    ],\n    \"publisher\": \"MoBeta Publishing\",\n
+        \   \"publishedDate\": \"2006-09-30\",\n    \"description\": \"Discusses the
+        effect of radiation on the body and its role in the development, diagnosis,
+        and treatment of cancer, offering summaries and evaluations of radiation treatment
+        options for different types of cancer.\",\n    \"industryIdentifiers\": [\n
+        \    {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0972514112\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780972514118\"\n
+        \    }\n    ],\n    \"pageCount\": 273,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Medical\"\n    ],\n    \"averageRating\": 1.0,\n    \"ratingsCount\":
+        1,\n    \"contentVersion\": \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\":
+        \"http://bks5.books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks5.books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=u3bnPGRxs1YC&printsec=frontcover&dq=cancer&hl=&cd=7&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=u3bnPGRxs1YC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=u3bnPGRxs1YC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": true,\n     \"acsTokenLink\": \"http://books.google.com/books/download/Cancer-sample-epub.acsm?id=u3bnPGRxs1YC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": false\n    },\n    \"webReaderLink\":
+        \"http://books.google.com/books/reader?id=u3bnPGRxs1YC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"This unique book gives timely advice for those facing difficult choices.\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"EIhNAAAAMAAJ\",\n
+        \  \"etag\": \"Y1o8l/IdexQ\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/EIhNAAAAMAAJ\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"its
+        causes, symptoms & treatment, giving the results of over forty years' experience
+        in the medical treatment of this disease\",\n    \"authors\": [\n     \"Eli
+        Grellet Jones\"\n    ],\n    \"publishedDate\": \"1911\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"OTHER\",\n      \"identifier\": \"UOM:39015023142154\"\n
+        \    }\n    ],\n    \"pageCount\": 301,\n    \"printType\": \"BOOK\",\n    \"categories\":
+        [\n     \"Health & Fitness\"\n    ],\n    \"contentVersion\": \"full-1.0.0\",\n
+        \   \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks4.books.google.com/books?id=EIhNAAAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks4.books.google.com/books?id=EIhNAAAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=EIhNAAAAMAAJ&printsec=frontcover&dq=cancer&hl=&cd=8&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=EIhNAAAAMAAJ&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=EIhNAAAAMAAJ\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"FREE\",\n    \"isEbook\": true\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"ALL_PAGES\",\n    \"embeddable\": true,\n
+        \   \"publicDomain\": true,\n    \"textToSpeechPermission\": \"ALLOWED\",\n
+        \   \"epub\": {\n     \"isAvailable\": false,\n     \"downloadLink\": \"http://books.google.com/books/download/Cancer.epub?id=EIhNAAAAMAAJ&hl=&output=epub&source=gbs_api\"\n
+        \   },\n    \"pdf\": {\n     \"isAvailable\": true,\n     \"downloadLink\":
+        \"http://books.google.com/books/download/Cancer.pdf?id=EIhNAAAAMAAJ&hl=&output=pdf&sig=ACfU3U0zqZlPA68D7FhlRzz3Vi_koiQ0mQ&source=gbs_api\"\n
+        \   },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=EIhNAAAAMAAJ&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"FULL_PUBLIC_DOMAIN\"\n   }\n  },\n  {\n   \"kind\":
+        \"books#volume\",\n   \"id\": \"rmcw52DmOIcC\",\n   \"etag\": \"A6kKUbM2aBI\",\n
+        \  \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/rmcw52DmOIcC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"subtitle\": \"The
+        Wayward Cell : Its Origins, Nature, and Treatment\",\n    \"authors\": [\n
+        \    \"Victor Richards\"\n    ],\n    \"publisher\": \"Univ of California
+        Press\",\n    \"publishedDate\": \"1978-09-01\",\n    \"description\": \"Discusses
+        the biological and historical aspects of cancer as well as methods of treatment
+        and the sociopsychological problems confronting patients\",\n    \"industryIdentifiers\":
+        [\n     {\n      \"type\": \"ISBN_10\",\n      \"identifier\": \"0520035968\"\n
+        \    },\n     {\n      \"type\": \"ISBN_13\",\n      \"identifier\": \"9780520035966\"\n
+        \    }\n    ],\n    \"pageCount\": 407,\n    \"printType\": \"BOOK\",\n    \"contentVersion\":
+        \"preview-1.0.0\",\n    \"imageLinks\": {\n     \"smallThumbnail\": \"http://bks1.books.google.com/books?id=rmcw52DmOIcC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks1.books.google.com/books?id=rmcw52DmOIcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=rmcw52DmOIcC&printsec=frontcover&dq=cancer&hl=&cd=9&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=rmcw52DmOIcC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=rmcw52DmOIcC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"ALL_PAGES\",\n    \"embeddable\": true,\n
+        \   \"publicDomain\": false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n
+        \   \"epub\": {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=rmcw52DmOIcC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Discusses the biological and historical aspects of cancer as well as methods
+        of treatment and the sociopsychological problems confronting patients\"\n
+        \  }\n  },\n  {\n   \"kind\": \"books#volume\",\n   \"id\": \"aVTMqaclr_kC\",\n
+        \  \"etag\": \"TtSgGYafxgc\",\n   \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/aVTMqaclr_kC\",\n
+        \  \"volumeInfo\": {\n    \"title\": \"Cancer\",\n    \"authors\": [\n     \"Alvin
+        Silverstein\",\n     \"Virginia B. Silverstein\",\n     \"Laura Silverstein
+        Nunn\"\n    ],\n    \"publisher\": \"21st Century\",\n    \"publishedDate\":
+        \"2006\",\n    \"description\": \"Explains different types of cancer, their
+        causes, symptoms and treatment, and, through case studies, what it is like
+        to live with cancer.\",\n    \"industryIdentifiers\": [\n     {\n      \"type\":
+        \"ISBN_10\",\n      \"identifier\": \"0761328335\"\n     },\n     {\n      \"type\":
+        \"ISBN_13\",\n      \"identifier\": \"9780761328339\"\n     }\n    ],\n    \"pageCount\":
+        121,\n    \"printType\": \"BOOK\",\n    \"categories\": [\n     \"Medical\"\n
+        \   ],\n    \"contentVersion\": \"0.1.0.0.preview.0\",\n    \"imageLinks\":
+        {\n     \"smallThumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n
+        \    \"thumbnail\": \"http://bks3.books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n
+        \   },\n    \"language\": \"en\",\n    \"previewLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&printsec=frontcover&dq=cancer&hl=&cd=10&source=gbs_api\",\n
+        \   \"infoLink\": \"http://books.google.com/books?id=aVTMqaclr_kC&dq=cancer&hl=&source=gbs_api\",\n
+        \   \"canonicalVolumeLink\": \"http://books.google.com/books/about/Cancer.html?hl=&id=aVTMqaclr_kC\"\n
+        \  },\n   \"saleInfo\": {\n    \"country\": \"US\",\n    \"saleability\":
+        \"NOT_FOR_SALE\",\n    \"isEbook\": false\n   },\n   \"accessInfo\": {\n    \"country\":
+        \"US\",\n    \"viewability\": \"PARTIAL\",\n    \"embeddable\": true,\n    \"publicDomain\":
+        false,\n    \"textToSpeechPermission\": \"ALLOWED_FOR_ACCESSIBILITY\",\n    \"epub\":
+        {\n     \"isAvailable\": false\n    },\n    \"pdf\": {\n     \"isAvailable\":
+        false\n    },\n    \"webReaderLink\": \"http://books.google.com/books/reader?id=aVTMqaclr_kC&hl=&printsec=frontcover&output=reader&source=gbs_api\",\n
+        \   \"accessViewStatus\": \"SAMPLE\"\n   },\n   \"searchInfo\": {\n    \"textSnippet\":
+        \"Explains different types of cancer, their causes, symptoms and treatment,
+        and, through case studies, what it is like to live with cancer.\"\n   }\n
+        \ }\n ]\n}\n"
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 15:27:14 GMT
+recorded_with: VCR 2.2.4

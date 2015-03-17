@@ -1,6 +1,5 @@
 module DisplayHelper
 
-
   # Renders the format field values with applicable format icons
   def render_format_value args
     format = args[:document][args[:field]]

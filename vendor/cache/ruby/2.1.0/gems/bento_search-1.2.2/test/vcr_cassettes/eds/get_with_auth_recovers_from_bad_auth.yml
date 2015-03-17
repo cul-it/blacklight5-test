@@ -1,0 +1,368 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
+        \     }\n"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/JSON; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 06 Aug 2012 23:07:55 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"AuthToken":"b4220769-046b-4c99-9262-f1dd130706c9","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/createsession?guest=y&profile=edsapi
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - b4220769-046b-4c99-9262-f1dd130706c9
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Mjc5
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1EeW5hdHJhY2U=":
+      - !binary |-
+        UFQ9MjgwNjQ2O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "RHluYXRyYWNl":
+      - !binary |-
+        UFQ9MjgwNjQ2O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
+    body:
+      encoding: US-ASCII
+      string: <CreateSessionResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><SessionToken>d389e524-95ea-4518-bd4a-6b0eb7c0af44.kEvPxolRdsxALTno8ChwQHJ3j2LNLih2ApF64T4yK4w=</SessionToken></CreateSessionResponseMessage>
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - BAD
+      Accept:
+      - application/xml
+      X-Sessiontoken:
+      - d389e524-95ea-4518-bd4a-6b0eb7c0af44.kEvPxolRdsxALTno8ChwQHJ3j2LNLih2ApF64T4yK4w=
+  response:
+    status:
+      code: 400
+      message: !binary |-
+        QmFkIFJlcXVlc3Q=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MzI5
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1EeW5hdHJhY2U=":
+      - !binary |-
+        UFQ9MjgwNjQ3O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "RHluYXRyYWNl":
+      - !binary |-
+        UFQ9MjgwNjQ3O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
+    body:
+      encoding: UTF-8
+      string: <APIErrorMessage xmlns="http://epnet.com/webservices/EbscoApi" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><DetailedErrorDescription>Invalid Authentication Token.
+        Please generate a new one.</DetailedErrorDescription><ErrorDescription>Auth
+        Token Invalid</ErrorDescription><ErrorNumber>104</ErrorNumber></APIErrorMessage>
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
+        \     }\n"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/JSON; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 06 Aug 2012 23:07:55 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"AuthToken":"078087ad-6ddb-438f-a42d-68073cb00f02","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/info
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - 078087ad-6ddb-438f-a42d-68073cb00f02
+      Accept:
+      - application/xml
+      X-Sessiontoken:
+      - d389e524-95ea-4518-bd4a-6b0eb7c0af44.kEvPxolRdsxALTno8ChwQHJ3j2LNLih2ApF64T4yK4w=
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MjU4Nw==
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1EeW5hdHJhY2U=":
+      - !binary |-
+        UFQ9MjgwNjQ4O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "RHluYXRyYWNl":
+      - !binary |-
+        UFQ9MjgwNjQ4O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
+    body:
+      encoding: US-ASCII
+      string: <InfoResponseMessage xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><AvailableSearchCriteria><AvailableSorts><AvailableSort><Id>date</Id><Label>Date
+        Descending</Label><AddAction>setsort(date)</AddAction></AvailableSort><AvailableSort><Id>relevance</Id><Label>Relevance</Label><AddAction>setsort(relevance)</AddAction></AvailableSort><AvailableSort><Id>date2</Id><Label>Date
+        Ascending</Label><AddAction>setsort(date2)</AddAction></AvailableSort></AvailableSorts><AvailableSearchFields><AvailableSearchField><FieldCode>TX</FieldCode><Label>All
+        Text</Label></AvailableSearchField><AvailableSearchField><FieldCode>AU</FieldCode><Label>Author</Label></AvailableSearchField><AvailableSearchField><FieldCode>TI</FieldCode><Label>Title</Label></AvailableSearchField><AvailableSearchField><FieldCode>SU</FieldCode><Label>Subject
+        Terms</Label></AvailableSearchField><AvailableSearchField><FieldCode>SO</FieldCode><Label>Source</Label></AvailableSearchField><AvailableSearchField><FieldCode>AB</FieldCode><Label>Abstract</Label></AvailableSearchField><AvailableSearchField><FieldCode>IS</FieldCode><Label>ISSN</Label></AvailableSearchField><AvailableSearchField><FieldCode>IB</FieldCode><Label>ISBN</Label></AvailableSearchField></AvailableSearchFields><AvailableExpanders><AvailableExpander><Id>thesaurus</Id><Label>Apply
+        related words</Label><AddAction>addexpander(thesaurus)</AddAction></AvailableExpander><AvailableExpander><Id>fulltext</Id><Label>Also
+        search within the full text of the articles</Label><AddAction>addexpander(fulltext)</AddAction></AvailableExpander></AvailableExpanders><AvailableLimiters><AvailableLimiter><Id>FT</Id><Label>Full
+        Text</Label><Type>select</Type><AddAction>addlimiter(FT:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>RV</Id><Label>Peer
+        Reviewed</Label><Type>select</Type><AddAction>addlimiter(RV:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>SO</Id><Label>Journal
+        Name</Label><Type>text</Type><AddAction>addlimiter(SO:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>DT1</Id><Label>Date
+        Published from</Label><Type>ymrange</Type><AddAction>addlimiter(DT1:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter><AvailableLimiter><Id>FT1</Id><Label>Available
+        in Library Collection</Label><Type>select</Type><AddAction>addlimiter(FT1:value)</AddAction><LimiterValues
+        i:nil="true"/></AvailableLimiter></AvailableLimiters></AvailableSearchCriteria></InfoResponseMessage>
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: get
+    uri: http://eds-api.ebscohost.com/edsapi/rest/endsession?sessiontoken=d389e524-95ea-4518-bd4a-6b0eb7c0af44.kEvPxolRdsxALTno8ChwQHJ3j2LNLih2ApF64T4yK4w=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Authenticationtoken:
+      - 078087ad-6ddb-438f-a42d-68073cb00f02
+      Accept:
+      - application/xml
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        cHJpdmF0ZQ==
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        MTc5
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04
+      !binary "U2VydmVy":
+      - !binary |-
+        TWljcm9zb2Z0LUlJUy83LjU=
+      !binary "WC1EeW5hdHJhY2U=":
+      - !binary |-
+        UFQ9MjgwNjQ5O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "RHluYXRyYWNl":
+      - !binary |-
+        UFQ9MjgwNjQ5O1BBPS0xNDcyMTU5NDk5O1BTPS03NjAxOTQ0MDc=
+      !binary "WC1Bc3BuZXQtVmVyc2lvbg==":
+      - !binary |-
+        NC4wLjMwMzE5
+      !binary "WC1Qb3dlcmVkLUJ5":
+      - !binary |-
+        QVNQLk5FVA==
+      !binary "RGF0ZQ==":
+      - !binary |-
+        TW9uLCAwNiBBdWcgMjAxMiAyMzowNzo1NSBHTVQ=
+    body:
+      encoding: US-ASCII
+      string: <EndSessionResponse xmlns="http://epnet.com/webservices/EbscoApi/Contracts"
+        xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><IsSuccessful>y</IsSuccessful></EndSessionResponse>
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:07:55 GMT
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
+        \     }\n"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/JSON; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 06 Aug 2012 23:08:26 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"AuthToken":"af1c9dbe-fbf1-4226-929c-6727d12ea795","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:08:27 GMT
+- request:
+    method: post
+    uri: https://eds-api.ebscohost.com/authservice/rest/uidauth
+    body:
+      encoding: UTF-8
+      string: ! "      {\n        \"UserId\":\"DUMMY_USER_ID\",\n        \"Password\":\"DUMMY_PWD\"\n
+        \     }\n"
+    headers:
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - private
+      Content-Length:
+      - '73'
+      Content-Type:
+      - application/JSON; charset=utf-8
+      Server:
+      - Microsoft-IIS/7.5
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Date:
+      - Mon, 06 Aug 2012 23:08:26 GMT
+    body:
+      encoding: US-ASCII
+      string: ! '{"AuthToken":"2ab4330a-399b-4ce1-b0bc-22597960ce7a","AuthTimeout":"1800"}'
+    http_version: 
+  recorded_at: Mon, 06 Aug 2012 23:08:27 GMT
+recorded_with: VCR 2.2.4

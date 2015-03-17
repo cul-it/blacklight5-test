@@ -6,7 +6,7 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
   include Blacklight::SolrHelper
   include CornellCatalogHelper
   include ActionView::Helpers::NumberHelper
-  include CornellParamsHelper
+#  include CornellParamsHelper
 #  include ActsAsTinyURL
   SearchHistoryWindow = 12 # how many searches to save in session history
 
@@ -28,10 +28,15 @@ module BlacklightCornell::CornellCatalog extend Blacklight::Catalog
     rescue_from RSolr::Error::Http, :with => :rsolr_request_error
   end
 
-  def search_action_url
-    #url_for(:action => 'index', :only_path => true)
-    catalog_index_url
-  end
+#  def search_action_url
+#    url_for(:action => 'index', :only_path => true)
+#    catalog_index_url
+#  end
+
+#  def search_action_url(index)
+#    url_for(:action => 'index', :only_path => true)
+#   catalog_index_url
+#  end
 
   def add_cjk_params_logic
     CatalogController.solr_search_params_logic << :cjk_query_addl_params

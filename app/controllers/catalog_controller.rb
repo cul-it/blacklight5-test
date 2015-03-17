@@ -5,8 +5,7 @@ class CatalogController < ApplicationController
   include BlacklightCornell::CornellCatalog
   include BlacklightUnapi::ControllerExtension
 
-  #self.solr_search_params_logic << :sortby_title_when_browsing
-
+  self.solr_search_params_logic# << :append_filter_query #:sortby_title_when_browsing
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
 
@@ -15,10 +14,9 @@ class CatalogController < ApplicationController
       :rows => 20,
 # DISCOVERYACCESS-1472      :fl => '*,score',
 # Look into removing :fl entirely during off sprint
-#      :fl => 'id title_display fulltitle_display fulltitle_vern_display title_uniform_display subtitle_display author_display language_display pub_date_display format url_access_display item_record_display holdings_record_display score',
+      :fl => 'id title_display fulltitle_display fulltitle_vern_display title_uniform_display subtitle_display author_display language_display pub_date_display format url_access_display item_record_display holdings_record_display score',
       :defType => 'edismax'
     }
-    
     ## list of display fields with icon
     config.display_icon = {
         'format' => 1
